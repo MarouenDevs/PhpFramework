@@ -1,0 +1,17 @@
+{
+  "name": "Btb core framework",
+  "author": "Marouen ben ahmed",
+  "autoload": {
+    "psr-4": {
+      "core\\": "core/",
+       "src\\":"../src/"
+    }
+    },
+  "require": {
+    "symfony/var-dumper": "v3.4.0-RC1",
+    "filp/whoops": "^2.1",
+    "catfan/Medoo": "^1.4",
+    "slim/slim": "^3.0",
+    "monolog/monolog": "^1.23"
+  }
+}
