@@ -13,6 +13,6 @@ use core\Bootstrap;
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
-$bootstrap = Bootstrap::getInstance($smarty);
+$bootstrap = Bootstrap::getInstance($smarty,$bougeuse);
 $bootstrap->run();
 

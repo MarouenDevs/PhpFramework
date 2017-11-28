@@ -62,8 +62,28 @@ class Router
 
             }
         }
+        // inject router as service into Slim Service Container
+
+        /*$container = $this->_app->getContainer();
+        $container['router'] = function($container){
+
+
+        };*/
 
         $this->_app->run();
+
+    }
+
+    public function getRoutes(){
+
+        return $this->_routes;
+    }
+
+    public function getRoutePath($route_name){
+
+        dump($this->_routes);
+        exit;
+
 
     }
 

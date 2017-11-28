@@ -7,6 +7,7 @@
  */
 
 return [
+    //Front routes
     [
         'methods' => ['GET'],
         'path' => '/',
@@ -50,7 +51,50 @@ return [
         'defaults' => 'FrontController:networkAction',
         'name' => 'circle'
 
-    ]
+    ],
+    [
+        'methods' => ['GET'],
+        'path' => '/btb-public-network',
+        'defaults' => 'FrontController:publicNetworkAction',
+        'name' => 'btb-public-network'
+
+    ],
+    [
+        'methods' => ['GET'],
+        'path' => 'contact',
+        'defaults' => 'FrontController:contactAction',
+        'name' => 'contact'
+
+    ],
+    // admin routes
+
+    [
+        'methods' => ['GET'],
+        'path' => '/mon-compte',
+        'defaults' => 'AdminController:indexAction',
+        'name' => 'backend_dashbord'
+
+    ],
+
+    [
+        'methods' => ['GET'],
+        'path' => '/search-members',
+        'defaults' => 'AdminController:searchAction',
+        'name' => 'serach_members'
+
+    ],
+
+
+    //logout
+
+    [
+        'methods' => ['GET'],
+        'path' => '/logout',
+        'defaults' => 'AdminController:logoutAction',
+        'name' => 'logout'
+
+    ],
+
 
 
 
