@@ -8,6 +8,7 @@
 
 namespace core;
 
+use core\Exceptions\BtbException;
 use Psr\Container\ContainerInterface;
 
 class Controller
@@ -24,6 +25,7 @@ class Controller
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
+        $this->beforeFilter($_SERVER['REQUEST_URI']);
     }
 
     public function redirect($routeName)
@@ -33,8 +35,24 @@ class Controller
         exit;
     }
 
+    /**
+     * @param $data
+     */
+    public function buildJsonResponse($data)
+    {
 
-    protected function beforeFilter($view)
+        if (is_array($data)) {
+
+            return json_encode($data);
+        } else {
+
+            throw new BtbException('Array type required as param to build json response');
+        }
+
+    }
+
+
+    protected function beforeFilter($path = null)
     {
     }
 
@@ -45,7 +63,7 @@ class Controller
      */
     protected function render($view, $params)
     {
-        $this->beforeFilter($view);
+
         $user = $this->container->get('user');
         if ($this->layout && is_string($this->layout)) {
             ob_start();

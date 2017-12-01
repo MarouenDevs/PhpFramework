@@ -76,6 +76,15 @@ return [
 
     ],
 
+
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/page-web-pro',
+        'defaults' => 'FrontController:webProAction',
+        'name' => 'web-pro'
+
+    ],
+
     [
         'methods' => ['GET'],
         'path' => '/search-members',
@@ -84,7 +93,15 @@ return [
 
     ],
 
+    //login
 
+    [
+        'methods' => ['GET'],
+        'path' => '/login',
+        'defaults' => 'AuthentificationController:loginAction',
+        'name' => 'login'
+
+    ],
     //logout
 
     [
@@ -95,8 +112,59 @@ return [
 
     ],
 
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/web-pro/company',
+        'defaults' => 'AdminController:editCompanyAction',
+        'name' => 'edit-company'
 
+    ],
+    ///web-pro/actualites,
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/web-pro/actualites',
+        'defaults' => 'AdminController:editActusAction',
+        'name' => 'edit-actus'
 
+    ],
+    //
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/web-pro/delete-actus',
+        'defaults' => 'AdminController:deleteActusAction',
+        'name' => 'delete-actus'
+
+    ],
+
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/web-pro/offres',
+        'defaults' => 'AdminController:editOffreAction',
+        'name' => 'edit-offre'
+
+    ],
+    // to do
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/web-pro/delete-offre',
+        'defaults' => 'AdminController:deleteOffreAction',
+        'name' => 'delete-offre'
+
+    ],
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/web-pro/gallery',
+        'defaults' => 'AdminController:galleryAction',
+        'name' => 'gallery'
+
+    ],
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/api/upload',
+        'defaults' => 'UploadController:uploadAction',
+        'name' => 'upload'
+
+    ]
 
 
 ];
