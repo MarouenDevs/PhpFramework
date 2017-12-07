@@ -7,6 +7,7 @@
  */
 
 require_once(__DIR__ . '/vendor/autoload.php');
+
 use core\Bootstrap;
 
 // dev mode reporting and explain error

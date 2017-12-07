@@ -52,7 +52,7 @@ class Controller
     }
 
 
-    protected function beforeFilter($path = null)
+    protected function beforeFilter($path)
     {
     }
 

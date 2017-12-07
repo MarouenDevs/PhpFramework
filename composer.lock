@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "catfan/medoo",
-            "version": "v1.5",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/catfan/Medoo.git",
-                "reference": "c5c7202fad8292977f5d047c1ee50373080d1dd6"
+                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/catfan/Medoo/zipball/c5c7202fad8292977f5d047c1ee50373080d1dd6",
-                "reference": "c5c7202fad8292977f5d047c1ee50373080d1dd6",
+                "url": "https://api.github.com/repos/catfan/Medoo/zipball/d65fad6c087e5904803e0dfd4e7a984d0eda77ef",
+                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef",
                 "shasum": ""
             },
             "require": {
@@ -63,7 +63,7 @@
                 "sql",
                 "sqlite"
             ],
-            "time": "2017-11-20T15:15:51+00:00"
+            "time": "2017-12-01T14:31:32+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -476,16 +476,16 @@
         },
         {
             "name": "slim/slim",
-            "version": "3.9.0",
+            "version": "3.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "575a8b53a0a489447915029c69680156cd355304"
+                "reference": "4086d0106cf5a7135c69fce4161fe355a8feb118"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/575a8b53a0a489447915029c69680156cd355304",
-                "reference": "575a8b53a0a489447915029c69680156cd355304",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/4086d0106cf5a7135c69fce4161fe355a8feb118",
+                "reference": "4086d0106cf5a7135c69fce4161fe355a8feb118",
                 "shasum": ""
             },
             "require": {
@@ -543,7 +543,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2017-11-04T08:46:46+00:00"
+            "time": "2017-11-26T19:13:09+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",

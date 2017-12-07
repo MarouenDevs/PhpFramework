@@ -12,7 +12,7 @@ namespace core;
 use core\Router;
 use core\orm\DBConnection;
 use core\Exceptions\BtbException;
-
+use src\views\Helpers\CropieHelper;
 class Bootstrap
 {
 
@@ -26,10 +26,14 @@ class Bootstrap
 
     private function __construct($smarty,$bougeuse)
     {
-        if (file_exists(__DIR__ . '../../config/config.php') && file_exists(__DIR__ . '../../config/paramaters.php')) {
-            require_once __DIR__ . '../../config/paramaters.php';
-            require_once __DIR__ . '../../config/config.php';
+
+        if (file_exists(__DIR__ . '/../config/config.php') && file_exists(__DIR__ . '/../config/paramaters.php')) {
+            require_once __DIR__ . '/../config/paramaters.php';
+            require_once __DIR__ . '/../config/config.php';
             // register tpl engine
+            $cropie = new CropieHelper($smarty);
+            $smarty->registerPlugin("function","cropie_upload", [$cropie,'process']);
+
             $this->_tplEngine = $smarty;
             // inject tplEngine
             $container = new \Slim\Container;

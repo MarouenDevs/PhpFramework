@@ -158,13 +158,30 @@ return [
         'name' => 'gallery'
 
     ],
+
+
     [
         'methods' => ['GET', 'POST'],
         'path' => '/api/upload',
         'defaults' => 'UploadController:uploadAction',
         'name' => 'upload'
 
+    ],
+    //delete_gallery
+    [
+        'methods' => ['GET', 'POST'],
+        'path' => '/web-pro/delete_gallery',
+        'defaults' => 'AdminController:deletegalleryAction',
+        'name' => 'delete_gallery'
+
     ]
+,
+    //
+    [
+    'methods' => ['GET', 'POST'],
+    'path' => '/web-pro/team',
+    'defaults' => 'AdminController:teamAction',
+    'name' => 'team'
 
-
+]
 ];

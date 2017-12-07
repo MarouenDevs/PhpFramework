@@ -29,9 +29,9 @@ class Router
     public function __construct($app)
     {
 
-        if(file_exists( __DIR__.'../../config/routes.php')){
+        if(file_exists( __DIR__.'/../config/routes.php')){
             // load routes
-            $this->_routes  = include __DIR__.'../../config/routes.php';
+            $this->_routes  = include __DIR__.'/../config/routes.php';
             $this->_app = $app;
         }else {
             throw new BtbException('File routes.php not founds dans app/config');
